@@ -1,0 +1,113 @@
+#1 Задание
+class Point3D:
+    def init(self, x=0, y=0, z=0):
+        self.x =x
+        self.y =y
+        self.z =z
+
+    def info(self):
+        print(f'x = {self.x}, y = {self.x}, z ={self.z}')
+
+    def distance(self, a , b):
+        return b - a
+
+
+    def distance2(self):
+        return f'Rastoyanie ot x do y = {self.distance(self.x, self.y)}. \nRastoyanie mejdu y and z: {self.distance(self.y, self.z)}'
+
+first = Point3D(2,5,8)
+second = Point3D(5,8,7)
+thrid = Point3D(8,7,3)
+
+first.info()
+print(first.distance2())
+
+
+
+print(first.x)
+
+
+
+
+#2 Задание 
+class Triangle:
+    def init(self, a, b):
+        self.a = a
+        self.b = b
+
+    def ploshad(self):
+        return (self.a * self.b) / 2
+
+    def perimeter(self):
+        return self.a + self.b + self.hypotenuse()
+
+    def hypotenuse(self):
+        return (self.a2 + self.b2)**0.5
+
+
+triangle = Triangle(3, 5)
+
+
+ploshad = triangle.ploshad()
+perimeter = triangle.perimeter()
+
+# Вывод результатов
+print("Площадь треугольника:", area)
+print("Периметр треугольника:", perimeter)
+
+
+#3 Задание
+import math
+
+class DistanceCalculator:
+    def init(self, x1, y1, x2, y2):
+        self.x1 = x1
+        self.y1 = y1
+        self.x2 = x2
+        self.y2 = y2
+
+    def calculate_distance(self):
+        distance = math.sqrt((self.x2 - self.x1)2 + (self.y2 - self.y1)2)
+        return distance
+
+a = DistanceCalculator(2, 4, 6, 9)
+b = DistanceCalculator(6, 9, 6, 0)
+c = DistanceCalculator(6, 0, 2, 4)
+
+ab_distance = a.calculate_distance()
+bc_distance = b.calculate_distance()
+ca_distance = c.calculate_distance()
+
+perimeter = ab_distance + bc_distance + ca_distance
+
+print( perimeter)
+
+
+#4 Задание
+class CPerson:
+    def init(self, first_name, last_name, middle_name, day, month, year, gender):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.middle_name = middle_name
+        self.day = day
+        self.month = month
+        self.year = year
+        self.gender = gender
+
+    def del(self):
+        print(f"Объект {self.first_name} {self.last_name} удален")
+
+    def display_info(self):
+        print("Информация о человеке:")
+        print(f"ФИО: {self.last_name} {self.first_name} {self.middle_name}")
+        print(f"Дата рождения: {self.day}.{self.month}.{self.year}")
+        print(f"Пол: {self.gender}")
+
+
+
+person = CPerson('Билал', 'Магамасаров', 'Муратович', '25', '07', '2006', 'мужской' )
+
+person.display_info()
+
+# Удаление объекта
+del person
